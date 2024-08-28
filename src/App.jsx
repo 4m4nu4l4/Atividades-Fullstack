@@ -1,11 +1,11 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import List from "./components/Video";
-import Video from "./components/Video";
+import About from "./pages/About";
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import ApiRickAndMorty from "./pages/ApiRickAndMorty";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -13,11 +13,11 @@ function App() {
   return (
     <>
       <Header />
-
-      <List titulo = 'Minha tela'/>
-
-      <Video />
-
+      <Routes>
+      <Route path="/" element={<ApiRickAndMorty />} />
+       {/* /* <Route path="/" element={<Home />} />*/}
+        <Route path="/about" element={<About />} />
+      </Routes>
       <Footer />
     </>
   );

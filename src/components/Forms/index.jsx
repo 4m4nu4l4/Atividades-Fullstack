@@ -1,9 +1,8 @@
 import { useState } from "react";
 import "./styles.css";
 
-export default function Form() {
-  const [formData, setFormData] = useState();
-  ({
+export default function Forms() {
+  const [formData, setFormData] = useState({
     nome: '',
     email: '',
     senha: ''

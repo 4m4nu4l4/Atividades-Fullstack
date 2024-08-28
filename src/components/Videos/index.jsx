@@ -1,6 +1,6 @@
 import "./styles.css";
 
-export default function Video() {
+export default function Videos() {
   return (
     <div class="container">
     <div id="information">
